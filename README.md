@@ -1,98 +1,30 @@
-# Flutter Project with .NET API and SQL Database
+#.NET API ile SQL Veritabanı Projesi
 
-Bu proje, bir Flutter mobil uygulaması ile .NET Core Web API kullanarak bir SQL Server veritabanına bağlanmayı amaçlamaktadır.
+Bu proje, Flutter mobil uygulaması ile .NET Core Web API kullanarak SQL Server veritabanına bağlanmayı amaçlamaktadır. Kullanıcılar üzerinde temel CRUD işlemlerini gerçekleştirebilirsiniz.Flutter dosyaları bir sonraki repositories' te dir.
 
-## İçindekiler
+## Özellikler
+
+- **API**: .NET Core Web API ile güvenilir ve hızlı veri işlemleri.
+- **Veritabanı**: SQL Server ile veri depolama ve yönetimi.
+
 ## API CRUD İşlemleri
 
-### Kullanıcı Tablosu CRUD İşlemleri
-
-#### 1. Kullanıcıları Listeleme
-
-- **Yöntem**: GET
-- **Endpoint**: `/api/users`
-- **Açıklama**: Tüm kullanıcıları listelemek için bu endpoint'i kullanabilirsiniz.
-- **Örnek İstek**:
-
-  ```http
-  GET /api/users HTTP/1.1
-  Host: localhost:5000
-
-  2. Yeni Kullanıcı Oluşturma
-Yöntem: POST
-Endpoint: /api/users
-Açıklama: Yeni bir kullanıcı eklemek için kullanılır.
-Gereken Veri: JSON formatında kullanıcı bilgileri.
-Örnek İstek:
-POST /api/users HTTP/1.1
-Host: localhost:5000
-Content-Type: application/json
-
-{
-  "fullName": "Ali Veli",
-  "email": "aliveli@example.com",
-  "departmentId": 1,
-  "genderId": 2,
-  "isOfficeEmployee": true,
-  "status": "Aktif"
-}
-3. Kullanıcı Bilgilerini Getirme
-Yöntem: GET
-
-Endpoint: /api/users/{id}
-
-Açıklama: Belirtilen id değerine sahip kullanıcı bilgilerini getirir.
-
-Örnek İstek:
-GET /api/users/1 HTTP/1.1
-Host: localhost:5000
-
-4. Kullanıcı Bilgilerini Güncelleme
-Yöntem: PUT
-
-Endpoint: /api/users/{id}
-
-Açıklama: Belirtilen id değerine sahip kullanıcının bilgilerini günceller.
-
-Gereken Veri: JSON formatında güncellenmiş kullanıcı bilgileri.
-
-Örnek İstek:
-PUT /api/users/1 HTTP/1.1
-Host: localhost:5000
-Content-Type: application/json
-
-{
-  "fullName": "Ali Veli",
-  "email": "aliveli@example.com",
-  "departmentId": 1,
-  "genderId": 2,
-  "isOfficeEmployee": false,
-  "status": "Pasif"
-}
-5. Kullanıcı Silme
-Yöntem: DELETE
-
-Endpoint: /api/users/{id}
-
-Açıklama: Belirtilen id değerine sahip kullanıcıyı siler.
-
-Örnek İstek:
-DELETE /api/users/1 HTTP/1.1
-Host: localhost:5000
-
-Bu endpointler, kullanıcı tablosu üzerinde temel CRUD işlemlerini gerçekleştirmenizi sağlar. Her bir istek, doğru formatta ve gerekli verilerle yapılmalıdır. API'yi kullanmadan önce veritabanınızın yapılandırıldığından ve API'nizin çalıştığından emin olun.
-
-
-
-
-- **Flutter Mobil Uygulama**: Kullanıcı dostu arayüz ve işlevsellik.
-- **.NET Core Web API**: Güvenilir ve hızlı sunucu tarafı işlemleri.
-- **SQL Server Veritabanı**: Veri depolama ve yönetimi.
+- **Listeleme**: `GET /api/users` - Tüm kullanıcıları listeler.
+- **Oluşturma**: `POST /api/users` - Yeni kullanıcı ekler.
+- **Getirme**: `GET /api/users/{id}` - Belirli bir kullanıcıyı getirir.
+- **Güncelleme**: `PUT /api/users/{id}` - Kullanıcı bilgilerini günceller.
+- **Silme**: `DELETE /api/users/{id}` - Kullanıcıyı siler.
 
 ## Gereksinimler
 
-- [Flutter](https://flutter.dev/docs/get-started/install)
 - [.NET SDK](https://dotnet.microsoft.com/download)
 - [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+
+![Ekran görüntüsü 2024-07-30 083101](https://github.com/user-attachments/assets/3e019744-7dc2-4f4a-a8dd-014af3c2dec4)
+
+![image](https://github.com/user-attachments/assets/0c41a198-de34-4a79-a0d2-80c9f35e801a)
+
+
+![image](https://github.com/user-attachments/assets/0fe82171-cce8-401e-b268-aebaad4e41eb)
 
 
